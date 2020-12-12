@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tampering Headers</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="../../style.css">
+	</head>
+	<body>
+		<div class="buttons">
+			<button id="stop" class="myButton">Stop Monitoring</button>
+			<button id="ok" class="myButton myDefault">Send Request</button>
+			<button id="race" class="myButton myAttack">Race it!</button>
+		</div>
+		<h3>Request #<span id="requestId"></span></h3>
+		<table class="toptable">
+			<tbody>
+				<tr><td>URL</td><td><input class="block" id="url" type="text"></td></tr>
+				<tr><td>Method</td><td id="method"></td></tr>
+				<tr><td>Type</td><td id="type"></td></tr>
+			</tbody>
+		</table>
+		<h3>Headers</h3>
+		<table class="paleBlueRows">
+			<thead><tr><th>Name</th><th>Value</th></tr></thead>
+			<tbody id="headersbody"></tbody>
+		</table>
+		<div>
+		  <button id="addHeader">Add Header</button>
+		</div>
+		<script src="popup.js"></script>
+	</body>
+</html>

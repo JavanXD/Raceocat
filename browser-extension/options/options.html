@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Preferences</title>
+        <meta charset="UTF-8">
+        <link href="../style.css" type="text/css" rel="stylesheet"/>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend>Dispatcher</legend>
+                <label for="dispatcher">Specify your dispatcher server which is used to distribute the requests.</label>
+                <br>
+                <input type="text" id="dispatcher" placeholder="http://localhost:80/dispatcher.php">
+            </fieldset>
+            <fieldset>
+                <legend>List of Servers</legend>
+                <label for="server">Specify your servers which are used to execute the requests.</label>
+                <div id="serverBody">
+                </div>
+                <button type="button" id="addServer">Add Server</button><button type="button" id="removeServer">Remove Server</button><br>
+            </fieldset>
+            <fieldset>
+                <legend>Proxy (not recommended - use for testing)</legend>
+                <label for="proxyOn">Use a proxy server</label>
+                <input type="checkbox" id="proxyOn">
+                <br>
+                <label for="proxy">If necessary specify a proxy through which the requests will be routed.</label>
+                <br>
+                <input type="text" id="proxy" placeholder="localhost:8080">
+            </fieldset>
+            <fieldset>
+                <legend>Remember to save your changes</legend>
+                <button type="submit">Save</button>
+            </fieldset>
+        </form>
+
+        <script src="options.js"></script>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+input[type=text]{
+    min-width:400px;
+}
+
+button.myDefault {
+    background-color: lightblue;
+}
+
+button.myAttack {
+    background-color: orangered;
+    color: white;
+}
+
+input.myEditInput {
+    min-width: 250px;
+}
+
+body {
+    font: normal 13px Arial, sans-serif;
+}
+
+table {
+    border: solid 1px lightblue;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font: normal 13px Arial, sans-serif;
+}
+table thead th {
+    background-color: lightblue;
+    border: solid 1px lightblue;
+    color: #333;
+    padding: 5px;
+    text-align: left;
+    text-shadow: 1px 1px 1px white;
+}
+table tbody td {
+    border: solid 1px lightblue;
+    color: #333;
+    padding: 5px;
+    text-shadow: 1px 1px 1px white;
+}
+button{
+    padding: 5px;
+    border-radius: 15px;
+    background: lightgrey;
+}

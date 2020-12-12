@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tampering Request Body</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="../../style.css">
+	</head>
+	<body>
+		<div class="buttons">
+			<button id="stop" class="myButton">Stop Monitoring</button>
+			<button id="cancel" class="myButton">Cancel Request</button>
+			<button id="ok" class="myButton myDefault">Proceed with Request</button>
+		</div>
+		<h3>Request #<span id="requestId"></span></h3>
+		<table class="toptable">
+			<tbody>
+				<tr><td>URL</td><td><input class="block" type="text" id="url"></td></tr>
+				<tr><td>Method</td><td id="method"></td></tr>
+				<tr><td>Type</td><td id="type"></td></tr>
+			</tbody>
+		</table>
+		<h3>Request Body</h3>
+		<input class="block" type="text" id="body">
+		<div id="norq">This request has no request body.</div>
+		<script src="popup.js"></script>
+	</body>
+</html>

@@ -1,0 +1,50 @@
+{
+	"manifest_version": 2,
+	"name": "Raceocat - Race Condition Interceptor",
+	"short_name": "Raceocat",
+	"version": "1",
+
+	"description": "Browser extension to test for race conditions in web applications.",
+	"homepage_url": "https://javan.de/raceocat",
+	"author": "javan.de",
+	"developer": {
+		"name": "Javan Rasokat",
+		"url": "https://javan.de/raceocat"
+	},
+
+	"icons": {
+		"48": "icons/icon-notamper-48.png"
+	},
+
+	"permissions": [
+		"webRequest",
+		"webRequestBlocking",
+		"storage",
+		"<all_urls>"
+	],
+
+	"background": {
+		"scripts": ["background.js"]
+	},
+
+	"browser_action": {
+		"browser_style": false,
+		"default_icon": {
+			"48": "icons/icon-notamper-48.png",
+			"32": "icons/icon-notamper-32.png",
+			"16": "icons/icon-notamper-16.png"
+		},
+		"default_title": "RC Interceptor"
+	},
+
+	"options_ui" : {
+    	"page"          : "options/options.html",
+        "browser_style" : true
+    },
+
+	"applications": {
+        "gecko": {
+            "id": "raceocat@javan.de"
+        }
+    }
+}

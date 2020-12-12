@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Start Request Monitoring and Intercepting</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="../../style.css">
+	</head>
+	<body>
+		<h3>Listen for types</h3>
+		<table>
+			<thead>
+				<tr>
+					<th>Type</th><th>Description</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<label><input class="types" type="checkbox" value="beacon">&nbsp;beacon</label>
+					</td><td>
+						Requests sent through the Beacon API.
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label><input class="types" type="checkbox" value="csp_report">&nbsp;csp_report</label>
+					</td>
+					<td>
+						Requests sent to the report-uri given in the Content-Security-Policy header, when an attempt to violate the policy is detected.
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label><input class="types" type="checkbox" value="font">&nbsp;font</label>
+					</td>
+					<td>
+						Web fonts loaded for a @font-face CSS rule.
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label><input class="types" type="checkbox" value="image">&nbsp;image</label>
+					</td>
+					<td>
+						Resources loaded to be rendered as image, except for imageset on browsers that support that type.
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label><input class="types" type="checkbox" value="imageset">&nbsp;imageset</label>
+					</td>
+					<td>
+						Images loaded by a <code>&lt;picture></code> element or given in an <code>&lt;img></code> element"s <code>srcset</code> attribute.
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label><input class="types" type="checkbox" value="main_frame" checked>&nbsp;main_frame</label>
+					</td>
+					<td>
+						Top-level documents loaded into a tab.
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label><input class="types" type="checkbox" value="media">&nbsp;media</label>
+					</td>
+					<td>
+						Resources loaded by a <code>&lt;video></code> or <code>&lt;audio></code> element.
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label><input class="types" type="checkbox" value="object">&nbsp;object</label>
+					</td>
+					<td>
+						Resources loaded by an <code>&lt;object></code> or <code>&lt;embed></code> element.
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label><input class="types" type="checkbox" value="object_subrequest">&nbsp;object_subrequest</label>
+					</td>
+					<td>
+						Requests sent by plugins.
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label><input class="types" type="checkbox" value="ping">&nbsp;ping</label>
+					</td>
+					<td>
+						Requests sent to the URL given in a hyperlink"s ping attribute, when the hypelink is followed.
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label><input class="types" type="checkbox" value="script">&nbsp;script</label>
+					</td>
+					<td>
+						Code that is loaded to be executed by a <code>&lt;script></code> element or running in a Worker.
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label><input class="types" type="checkbox" value="speculative">&nbsp;speculative</label>
+					</td>
+					<td>
+						A TCP/TLS handshake made by the browser when it determines it will need the connection open soon.
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label><input class="types" type="checkbox" value="stylesheet">&nbsp;stylesheet</label><br>
+					</td>
+					<td>
+						CSS stylesheets loaded to describe the representation of a document.
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label><input class="types" type="checkbox" value="sub_frame">&nbsp;sub_frame</label>
+					</td>
+					<td>
+						Documents loaded into an <code>&lt;iframe></code> or <code>&lt;frame></code> element.
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label><input class="types" type="checkbox" value="web_manifest">&nbsp;web_manifest</label>
+					</td>
+					<td>
+						Web App Manifests loaded for websites that can be installed to the homescreen.
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label><input class="types" type="checkbox" value="websocket">&nbsp;websocket</label>
+					</td>
+					<td>
+						Requests initiating a connection to a server through the WebSocket API.
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label><input class="types" type="checkbox" value="xbl">&nbsp;xbl</label><br>
+					</td>
+					<td>
+						XBL bindings loaded to extend the behavior of elements in a document.
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label><input class="types" type="checkbox" value="xml_dtd">&nbsp;xml_dtd</label>
+					</td>
+					<td>
+						DTDs loaded for an XML document.
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label><input class="types" type="checkbox" value="xmlhttprequest" checked>&nbsp;xmlhttprequest</label>
+					</td>
+					<td>
+						Requests sent by an XMLHttpRequest object or through the Fetch API.
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label><input class="types" type="checkbox" value="xslt">&nbsp;xslt</label>
+					</td>
+					<td>
+						XSLT stylesheets loaded for transforming an XML document.
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label><input class="types" type="checkbox" value="other">&nbsp;other</label>
+					</td>
+					<td>
+						Resources that aren"t covered by any other available type.
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<br>
+		<label for="matchregex">Monitor only requests who's URL matches: <input value="(.*?)" id="matchregex"></label>
+		<br>
+		<label for="tab">Monitor requests only from this tab: <input type="checkbox" id="tab"></label>
+		<br>
+		<p>Start live request monitoring?</p>
+		<button id="n" class="myButton">No, Cancel</button>
+		<button id="y" class="myButton myDefault">Yes, start monitoring</button>
+		<script src="popup.js"></script>
+	</body>
+</html>
