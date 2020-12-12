@@ -13,24 +13,24 @@
 ## Quickstart
 
 ## Architecture Overview
-
+ 
 ![Race Conditions](./docs/architecture/Race-Architecture.png)
-
+ 
 ## List of Projects  
 
-### [Browser Extension](./browser-extension/README.md)
-Firefox browser extension for live request monitoring and selecting the appropiate request which is going to be forwarded to the Race Dispatcher.
+### - [Browser Extension for Firefox](./browser-extension/README.md#Usage)
+Firefox browser extension for live request monitoring and intercepting the desired request which will be forwarded to the Race Dispatcher. 
 
-### [Race Routine Infrastructure](./race-routine-infrastructure/README.md)
-Race Dispatcher and Race Script to execute synchronous requests against an given endpoint.
+### - [Race Routine Infrastructure](./race-routine-infrastructure/README.md#Race-Routine-Infrastructure)
+Race Dispatcher and Race Script to execute parallel requests against any given endpoint. 
 
 
-### OWASP Zed Attack Proxy (ZAP) Add-On
-ZAP Add-On to forward a request to a Race Dispatcher.
+### - [OWASP Zed Attack Proxy (ZAP) Extender](./zap-extender/README.md#Overview)
+ZAP Extensions to test for Race Conditions. 
 
-### DVWA extension
+### - DVWA extension
 
-### Vulnerable web application
+### - Vulnerable web application
 
 ## License
 Code of Raceocat is licensed under the Apache License 2.0.
