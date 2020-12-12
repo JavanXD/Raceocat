@@ -1,0 +1,55 @@
+{
+   "method":"POST",
+   "url":"https://m.stripe.com/6",
+   "type":"xmlhttprequest",
+   "headers":[
+      {
+         "name":"Host",
+         "value":"m.stripe.com"
+      },
+      {
+         "name":"User-Agent",
+         "value":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:83.0) Gecko/20100101 Firefox/83.0"
+      },
+      {
+         "name":"Accept",
+         "value":"*/*"
+      },
+      {
+         "name":"Accept-Language",
+         "value":"de-DE,de;q=0.8,en-US;q=0.5,en;q=0.3"
+      },
+      {
+         "name":"Accept-Encoding",
+         "value":"gzip, deflate, br"
+      },
+      {
+         "name":"Referer",
+         "value":"https://m.stripe.network/inner.html"
+      },
+      {
+         "name":"Content-Type",
+         "value":"text/plain;charset=UTF-8"
+      },
+      {
+         "name":"Content-Length",
+         "value":"2612"
+      },
+      {
+         "name":"Origin",
+         "value":"https://m.stripe.network"
+      },
+      {
+         "name":"DNT",
+         "value":"1"
+      },
+      {
+         "name":"Connection",
+         "value":"keep-alive"
+      },
+      {
+         "name":"Cookie",
+         "value":"m=ddb22b24-2c56-4ebd-9bbf-8a75424393f8364b13; private_machine_identifier=VyLj2p6kmHo94JSjDOlPqoP3i0PuaQMYESh7rb5lNfBYoIYxtpLCjRGczdUmpAYO6nY%3D"
+      }
+   ]
+}

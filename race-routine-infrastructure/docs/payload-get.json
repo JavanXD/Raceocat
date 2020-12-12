@@ -1,0 +1,47 @@
+{
+   "method":"GET",
+   "url":"https://javan.b1ue.tech/log.php",
+   "type":"main_frame",
+   "headers":[
+      {
+         "name":"Host",
+         "value":"www.php.net"
+      },
+      {
+         "name":"User-Agent",
+         "value":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:83.0) Gecko/20100101 Firefox/83.0"
+      },
+      {
+         "name":"Accept",
+         "value":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"
+      },
+      {
+         "name":"Accept-Language",
+         "value":"de-DE,de;q=0.8,en-US;q=0.5,en;q=0.3"
+      },
+      {
+         "name":"Accept-Encoding",
+         "value":"gzip, deflate, br"
+      },
+      {
+         "name":"Referer",
+         "value":"https://www.google.com/"
+      },
+      {
+         "name":"DNT",
+         "value":"1"
+      },
+      {
+         "name":"Connection",
+         "value":"keep-alive"
+      },
+      {
+         "name":"Cookie",
+         "value":"LAST_LANG=en; COUNTRY=NA%2C45.112.85.244"
+      },
+      {
+         "name":"Upgrade-Insecure-Requests",
+         "value":"1"
+      }
+   ]
+}

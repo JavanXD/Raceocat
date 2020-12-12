@@ -1,0 +1,12 @@
+<html>
+<body>
+    <div id="root"></div>
+    <script>
+        var host = 'ws://javan.b1ue.tech:8090/websockets.php';
+        var socket = new WebSocket(host);
+        socket.onmessage = function(e) {
+            document.getElementById('root').innerHTML = e.data;
+        };
+    </script>
+</body>
+</html>
