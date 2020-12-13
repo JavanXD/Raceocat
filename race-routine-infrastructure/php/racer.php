@@ -11,7 +11,6 @@ error_reporting(E_ALL);
 if (isset($_POST['payload'])) {
 var_dump($_POST['payload']);
 	$payload = json_decode($_POST['payload']);
-//	var_dump($payload);
 	$method = isset($payload->method) ? strtoupper($payload->method) : "";
 	$url = isset($payload->url) ? $payload->url : "";
 	$body = isset($payload->body) ? $payload->body : "";
@@ -52,9 +51,6 @@ var_dump($_POST['payload']);
 		} else {
 			curl_setopt($ch[$j], CURLOPT_CUSTOMREQUEST, $method);
 		}
-		//if(isset($curl_cookie)){
-		//	curl_setopt($ch[$j], CURLOPT_COOKIE, $curl_cookie);
-		//}
 		if(isset($proxy)){
 			curl_setopt($ch[$j], CURLOPT_PROXY, $proxy);
 			curl_setopt($ch[$j], CURLOPT_PROXY_SSL_VERIFYPEER, false);
@@ -65,6 +61,7 @@ var_dump($_POST['payload']);
 		curl_setopt($ch[$j], CURLOPT_SSL_VERIFYHOST, false);
 		curl_setopt($ch[$j], CURLOPT_SSL_VERIFYPEER, false);
 		curl_setopt($ch[$j], CURLOPT_TIMEOUT, 1);
+		//if(isset($curl_cookie)){ curl_setopt($ch[$j], CURLOPT_COOKIE, $curl_cookie); }
 		//if (isset($curl_referer)) { curl_setopt($ch[$j], CURLOPT_REFERER, $curl_referer); }
 		//if (isset($curl_useragent)) { curl_setopt($ch[$j], CURLOPT_USERAGENT, $curl_useragent); }
 		if (isset($curl_headers)) { curl_setopt($ch[$j], CURLOPT_HTTPHEADER, $curl_headers); }

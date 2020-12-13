@@ -1,4 +1,4 @@
-# Race-o-cat
+# Race-o-cat ![Raceocat Logo](docs/logo/logo-tamper.png)
 > Make exploiting race conditions in web applications highly efficient and ease-of-use.
 
 ## Overview
@@ -13,20 +13,20 @@
 ## Quickstart
 
 ## Architecture Overview
- 
+
 ![Race Conditions](./docs/architecture/Race-Architecture.png)
- 
+
 ## List of Projects  
 
 ### - [Browser Extension for Firefox](./browser-extension/README.md#Usage)
-Firefox browser extension for live request monitoring and intercepting the desired request which will be forwarded to the Race Dispatcher. 
+Firefox browser extension for live request monitoring and intercepting the desired request which will be forwarded to the Race Dispatcher.
 
 ### - [Race Routine Infrastructure](./race-routine-infrastructure/README.md#Race-Routine-Infrastructure)
-Race Dispatcher and Race Script to execute parallel requests against any given endpoint. 
+Race Dispatcher and Race Script to execute parallel requests against any given endpoint.
 
 
 ### - [OWASP Zed Attack Proxy (ZAP) Extender](./zap-extender/README.md#Overview)
-ZAP Extensions to test for Race Conditions. 
+ZAP Extensions to test for Race Conditions.
 
 ### - DVWA extension
 

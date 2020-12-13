@@ -53,15 +53,9 @@ ob_implicit_flush(1);
 		}
 		</script>
 		<style>
-		button, input[type=submit]{
+		input[type=submit].myAttack{
 		    padding: 5px;
-		}
-		button.myDefault {
-		    background-color: lightblue;
-		}
-
-		button.myAttack, input.myAttack {
-		    background-color: orangered;
+			background-color: orangered;
 		    color: white;
 		}
 		</style>
@@ -69,8 +63,6 @@ ob_implicit_flush(1);
     <body>
 
 <?php
-
-// dispatcher.php?server=https://javan.b1ue.tech&proxy=localhost:8080
 
 echo '<form action="dispatcher.php" method="post">';
 $default_host = $_SERVER['HTTP_HOST'];
