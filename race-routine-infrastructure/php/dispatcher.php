@@ -13,7 +13,7 @@ header("Cache-Control: post-check=0, pre-check=0", false);
 header("Pragma: no-cache");
 
 function flush_buffers(){
-	ob_end_flush();
+	@ob_end_flush();
 	@ob_flush();
 	flush();
 	ob_start();
@@ -90,7 +90,7 @@ echo '<fieldset>
 	<input type="text" name="proxy" '.(isset($proxy) ? ' value="'.htmlspecialchars($proxy).'"' : "").' placeholder="localhost:8080 (keep empty if none)" size="50">
 </fieldset>';
 
-$payload = isset($_REQUEST['payload']) ? $_REQUEST['payload'] : '{"method":"GET","url":"https://'.htmlspecialchars($default_host).'/log.php"}';
+$payload = isset($_REQUEST['payload']) ? $_REQUEST['payload'] : '{"method":"GET","url":"https://'.$default_host.'/log.php"}';
 echo '<fieldset>
 	<legend>Payload</legend>
 	<textarea name="payload" cols="50" rows="25">'.htmlspecialchars($payload).'</textarea></fieldset>
@@ -98,6 +98,13 @@ echo '<fieldset>
 </form>';
 
 if (isset($_POST['payload']) && isset($_POST['submit'])) {
+
+	$file = 'payload.log';
+	$microtime = microtime(true);
+	$time = date("Y-m-d h:i:sa");
+	$ip = $_SERVER['REMOTE_ADDR'];
+	$req = $microtime.' | '.$time.' | '.$ip.' | '.$payload."\r\n";
+	$fp = file_put_contents($file, $req, FILE_APPEND);
 
 	for ($j=0;$j<count($servers);$j++) {
 
