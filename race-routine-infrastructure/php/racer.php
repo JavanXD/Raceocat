@@ -9,7 +9,7 @@ error_reporting(E_ALL);
 //echo "<br>";
 
 if (isset($_POST['payload'])) {
-var_dump($_POST['payload']);
+	//var_dump($_POST['payload']);
 	$payload = json_decode($_POST['payload']);
 	$method = isset($payload->method) ? strtoupper($payload->method) : "";
 	$url = isset($payload->url) ? $payload->url : "";
@@ -53,7 +53,7 @@ var_dump($_POST['payload']);
 		}
 		if(isset($proxy)){
 			curl_setopt($ch[$j], CURLOPT_PROXY, $proxy);
-			curl_setopt($ch[$j], CURLOPT_PROXY_SSL_VERIFYPEER, false);
+			//curl_setopt($ch[$j], CURLOPT_PROXY_SSL_VERIFYPEER, false);
 		}
 		curl_setopt($ch[$j], CURLOPT_HEADER, false);
 		curl_setopt($ch[$j], CURLOPT_FOLLOWLOCATION, false);
