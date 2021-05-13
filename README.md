@@ -1,4 +1,4 @@
-# Race-o-cat ![Raceocat Logo](docs/logo/logo-tamper.png)
+# Race-o-cat <img src="docs/logo/logo-tamper.png" width="50" height="50">
 > Make exploiting race conditions in web applications highly efficient and ease-of-use.
 
 ## Overview
