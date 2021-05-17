@@ -28,9 +28,8 @@ Race Dispatcher and Race Script to execute parallel requests against any given e
 ### - [OWASP Zed Attack Proxy (ZAP) Extender](./zap-extender/README.md#Overview)
 ZAP Extensions to test for Race Conditions.
 
-### - DVWA extension
-
-### - Vulnerable web application
+### - [Vulnerable web application](./vuln-webapp/)
+A web application with typical vulnerable use cases such as withdrawing money or excessive poll votes. 
 
 ## License
 Code of Raceocat is licensed under the Apache License 2.0.
