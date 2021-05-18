@@ -32,4 +32,4 @@ If you take a look into the  `/docker/docker-compose.yml` file to can see which 
 
 ## Security
 
-By its design this web application is vulnerable. To make testing more easy
+By its design this web application is vulnerable. 
