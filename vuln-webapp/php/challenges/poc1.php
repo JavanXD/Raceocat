@@ -1,16 +1,13 @@
 <h2>Challenge 1: Bank account withdraw</h2>
 
-<p>You can withdraw only enough money so that your bank account is not in the negative. Your bank account can not overspend. </p>
+<p>You can withdraw only enough money so that your bank account is not in the negative. Your bank account can not overspend.</p>
 
-<a href="?accountID=1">View bank account balance of accountID 1</a><br>
-<a href="?accountID=1">View bank account balance of accountID 2</a><br>
-Action: <a href="?accountID=1&amount=500">Withdraw 500€ from accountID 1</a><br>
-
+<p>
+    <a href="?accountID=1">View bank account balance of accountID 1</a><br>
+    <a href="?accountID=1">View bank account balance of accountID 2</a><br>
+    Action: <a href="?accountID=1&amount=500">Withdraw 500€ from accountID 1</a>
+</p>
 <?php
-
-// ?accountID=1 - Check your Balance
-// ?accountID=1&amount=500 - Withdrawal 500€
-// ?accountID=1&amount=-500 - Add 500€ to your bank account
 
 if (isset($_REQUEST['accountID'])) {
 
@@ -22,7 +19,7 @@ if (isset($_REQUEST['accountID'])) {
     }
 
     if(isset($_REQUEST['amount'])) {
-        $amount = intval($_REQUEST['amount']);
+        $amount = (INT)$_REQUEST['amount'];
         echo "You are withdrawing: $amount <br>";
         $new_balance = $balance-$amount;
         race_window(RACE_WINDOW);

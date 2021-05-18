@@ -10,7 +10,7 @@ function race_window($microseconds=0){
     // 1000000 = 1s
     if ($microseconds > 0) {
 	       usleep($microseconds);
-           echo "Added a race window to make testing easier. Time was ".round($microseconds/1000, 3)." ms.<br>";
+           echo "Executed a artifically race window of ".round($microseconds/1000, 3)." ms.<br>";
     }
 
 }

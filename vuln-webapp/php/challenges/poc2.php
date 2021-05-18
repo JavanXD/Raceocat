@@ -1,16 +1,12 @@
 <h2>Challenge 2: Multiple poll votes</h2>
 
-<p>You are only allowed to like a postingID once. Similar to a facebook or twitter like.</p>
+<p>You are only allowed to like a postingID once. Similar to a facebook post or a twitter feed.</p>
 
-<a href="?postingID=1">View all the likes of postingID 1</a><br>
-Action: <a href="?postingID=1&userID=5">Like postingID 1 with userID 5</a><br>
-
+<p>
+    <a href="?postingID=1">View all the likes of postingID 1</a><br>
+    Action: <a href="?postingID=1&userID=5">Like postingID 1 with userID 5</a>
+</p>
 <?php
-
-// ?postingID=1 - View all the likes by all users for a selected postingID
-// ?postingID=1&userID=1 - Like a posting
-
-// For example if you are only allowed to vote once
 
 if (isset($_REQUEST['postingID'])) {
 
@@ -47,7 +43,7 @@ if (isset($_REQUEST['postingID'])) {
     $result = $mysqli->query($sql);
 
     echo "The posting with postingID ".$postingID." was liked by the following people:<br>";
-    if ($result->num_rows > 0) {    
+    if ($result->num_rows > 0) {
         // output data of each row
         while ($row = $result->fetch_assoc()) {
             echo "- Liked by userID ".$row['userID']."<br>";
