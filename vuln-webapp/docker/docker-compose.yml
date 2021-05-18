@@ -1,0 +1,54 @@
+version: "3.7"
+
+services:
+
+  web:
+    image: nginx:latest
+    ports:
+      - 80:80
+    volumes:
+      - ./../php/:/var/www/myapp
+      - ./site.conf:/etc/nginx/conf.d/site.conf
+    depends_on:
+      - php
+      - mariadb
+
+  php:
+    image: php:7.4-fpm
+    volumes:
+      - ./../php/:/var/www/myapp
+      - ./php.ini:/usr/local/etc/php/php.ini
+    command:
+      - /bin/sh
+      - -c
+      - |
+          docker-php-ext-install mysqli
+          docker-php-ext-install curl
+          docker-php-ext-install bcmath
+          echo "extensions installed... starting php-fpm..."
+          php-fpm
+    depends_on:
+      - mariadb
+
+  mariadb:
+    image: mariadb:10.5
+    restart: always
+    command: "mysqld --init-file /data/application/init.sql"
+    volumes:
+      - mariadb-data:/var/lib/mysql
+      - ./init.sql:/data/application/init.sql
+    environment:
+      MYSQL_ROOT_PASSWORD: qwerty
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    ports:
+      - 8000:80
+    environment:
+      - PMA_ARBITRARY=0
+      - PMA_HOST=mariadb
+    depends_on:
+      - mariadb
+
+volumes:
+  mariadb-data:
