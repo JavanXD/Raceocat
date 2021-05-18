@@ -4,7 +4,7 @@
 
 ### Live demo
 
-Live: https://raceocat.yaaw.de/
+Live: https://raceocat.yaaw.de
 
 ### Using docker
 
@@ -15,7 +15,7 @@ Live: https://raceocat.yaaw.de/
 docker-compose up -d
 ```
 
-* `http://php-docker.local:80/index.php` - to access the web app
+* `http://php-docker.local` - to access the web app
 * `http://localhost:8000` - phpmyadmin, login using `root`/`qwerty` credentials and the host is `mariadb`
 * `/docker/init.sql` - the DB dump which is imported
 
@@ -32,4 +32,4 @@ If you take a look into the  `/docker/docker-compose.yml` file to can see which 
 
 ## Security
 
-By its design this web application is vulnerable. 
+By its design this web application is vulnerable.
