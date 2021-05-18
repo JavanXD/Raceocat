@@ -2,7 +2,7 @@
 
 <a href="?accountID=1">See bank balance of accountID 1</a><br>
 
-<a href="?postingID=1&amount=500">Withdrawal 500€</a><br>
+<a href="?accountID=1&amount=500">Withdrawal 500€</a><br>
 
 <?php
 
@@ -13,11 +13,11 @@
 if (isset($_REQUEST['accountID'])) {
 
     $accountID = (INT)$mysqli->real_escape_string($_REQUEST['accountID']);
-    $result = $mysqli->query("SELECT balance FROM bank WHERE accountID = $accountID LIMIT 0,1");
-    $row = $result->fetch_assoc();
-    $balance = $row["balance"];
-
-    echo "Current balance: $balance €<br>";
+    $result = $mysqli->query("SELECT balance FROM bank WHERE accountID = '$accountID' LIMIT 0,1");
+    while($row = $result->fetch_assoc()) {
+        $balance = $row["balance"];
+        echo "Current balance: $balance €<br>";
+    }
 
     if(isset($_REQUEST['amount'])) {
         $amount = intval($_REQUEST['amount']);
