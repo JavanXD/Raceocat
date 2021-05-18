@@ -4,7 +4,7 @@
 
 <p>
     <a href="?accountID=1">View bank account balance of accountID 1</a><br>
-    <a href="?accountID=1">View bank account balance of accountID 2</a><br>
+    <a href="?accountID=2">View bank account balance of accountID 2</a><br>
     Action: <a href="?accountID=1&amount=500">Withdraw 500€ from accountID 1</a>
 </p>
 <?php
