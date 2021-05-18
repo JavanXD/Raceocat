@@ -16,6 +16,9 @@ include_once('challenges/poc3.php');
 
 ?>
 <h2>Debug info</h2>
+<p>
 <?php
 echo 'PHP version: <i>' . phpversion() . '</i><br>';
 echo 'MySql version: <i>' . $mysqli->server_info . '</i><br>';
+?>
+</p>
