@@ -1,7 +1,6 @@
 <h2>Challenge 3: Brute force 2FA code</h2>
 
 <a href="?email=raceme@example.org">Check login log for raceme@example.org</a><br>
-
 <a href="?email=raceme@example.org&code=0022">Try to login using 0022 as 2FA code</a><br>
 <a href="?email=raceme@example.org&code=0012">Try to login using 0012 as 2FA code</a><br>
 
@@ -55,7 +54,8 @@ if (isset($_REQUEST['email']) && filter_var($_REQUEST['email'], FILTER_VALIDATE_
             FROM logins
             WHERE email = '$email'
             AND timestamp > UNIX_TIMESTAMP()-5*60
-            ORDER BY timestamp ASC";
+            ORDER BY timestamp DESC
+            LIMIT 0,30";
     $result = $mysqli->query($sql);
 
     if ($result->num_rows > 0) {
