@@ -34,7 +34,7 @@ if (isset($_REQUEST['email']) && filter_var($_REQUEST['email'], FILTER_VALIDATE_
                             WHERE email = '$email'
                             AND code = $code LIMIT 0,1");
             if ($result->num_rows == 1) {
-                echo "Login success.<br>";
+                echo "Login success, 2FA code '$code' is correct.<br>";
                 $login_success = true;
             } else {
                 echo "Wrong code.<br>";
@@ -66,7 +66,7 @@ if (isset($_REQUEST['email']) && filter_var($_REQUEST['email'], FILTER_VALIDATE_
         echo "List of logins within the last ".($limit_seconds/60)." minutes:<br>";
         // output data of each row
         while ($row = $result->fetch_assoc()) {
-            echo "- <i>".htmlspecialchars($row['email'])."</i> tried to login at ".$row['timestamp']." by using the 2FA code ".$row['code']." and was ".(($row['success']) ? "successfull": "unsuccessfull" )."<br>";
+            echo "- <i>".htmlspecialchars($row['email'])."</i> tried to login at ".$row['timestamp']." by using the 2FA code '".$row['code']."' and was ".(($row['success']) ? "successfull": "unsuccessfull" )."<br>";
         }
     } else {
         echo "No logins in the last ".($limit_seconds/60)." minutes.<br>";

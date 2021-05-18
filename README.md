@@ -29,7 +29,7 @@ Race Dispatcher and Race Script to execute parallel requests against any given e
 ZAP Extensions to test for Race Conditions.
 
 ### - [Vulnerable web application](./vuln-webapp/)
-A web application with typical vulnerable use cases such as withdrawing money or excessive poll votes. 
+A web application with typical vulnerable use cases such as withdrawing money or excessive poll votes.
 
 ## License
 Code of Raceocat is licensed under the Apache License 2.0.
