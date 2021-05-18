@@ -25,7 +25,7 @@ if (isset($_REQUEST['email']) && filter_var($_REQUEST['email'], FILTER_VALIDATE_
                                     FROM logins
                                     WHERE email = '$email'
                                     AND UNIX_TIMESTAMP(`timestamp`) >= UNIX_TIMESTAMP()-$limit_seconds");
-        race_window(RACE_WINDOW);
+
         if ($result->num_rows < $limit_logins) {
             $login_success = false;
             //echo "Less then $limit_logins logins in last minute, everything OK.<br>";
@@ -40,7 +40,7 @@ if (isset($_REQUEST['email']) && filter_var($_REQUEST['email'], FILTER_VALIDATE_
                 echo "Wrong code.<br>";
                 $login_success = false;
             }
-
+            race_window(RACE_WINDOW);
             $mysqli->query("INSERT INTO logins (email, code, success) VALUES ('$email', '$code', '".(INT)$login_success."')");
             if ($mysqli->insert_id) {
                 //echo "You tried to login. Added login to the log.<br>";
@@ -59,7 +59,7 @@ if (isset($_REQUEST['email']) && filter_var($_REQUEST['email'], FILTER_VALIDATE_
             WHERE email = '$email'
             AND UNIX_TIMESTAMP(timestamp) >= UNIX_TIMESTAMP()-$limit_seconds
             ORDER BY timestamp DESC
-            LIMIT 0,10";
+            LIMIT 0,20";
     $result = $mysqli->query($sql);
 
     if ($result->num_rows > 0) {

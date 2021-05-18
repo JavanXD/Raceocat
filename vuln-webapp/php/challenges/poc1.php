@@ -20,21 +20,21 @@ if (isset($_REQUEST['accountID'])) {
 
     if(isset($_REQUEST['amount'])) {
         $amount = (INT)$_REQUEST['amount'];
-        echo "You are withdrawing: $amount <br>";
+        echo "You are withdrawing: $amount € <br>";
         $new_balance = $balance-$amount;
         race_window(RACE_WINDOW);
         if($new_balance >= 0) {
             $mysqli->query("UPDATE bank
-                            SET balance = $new_balance
+                            SET balance = balance-$amount
                             WHERE accountID = $accountID");
             if ($mysqli->affected_rows == 1)
             {
-                echo "withdraw success, new bank balance is $new_balance €.<br>";
+                echo "Withdrawed $amount €, the new balance is $new_balance €.<br>";
             }else{
-                echo "accountID $accountID not found.<br>";
+                echo "AccountID $accountID not found.<br>";
             }
         } else {
-            echo "You don't have enought money in your bank account (currently: $new_balance €) to withdrawal that much.<br>";
+            echo "You don't have enought money in your bank account (currently: $balance €) to withdrawal $amount €.<br>";
         }
     }
 
