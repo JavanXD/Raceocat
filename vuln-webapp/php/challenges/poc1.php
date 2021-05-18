@@ -1,8 +1,10 @@
-<h2>Challenge 1: Bank account withdrawal</h2>
+<h2>Challenge 1: Bank account withdraw</h2>
 
-<a href="?accountID=1">See bank balance of accountID 1</a><br>
+<p>You can withdraw only enough money so that your bank account is not in the negative. Your bank account can not overspend. </p>
 
-<a href="?accountID=1&amount=500">Withdrawal 500€</a><br>
+<a href="?accountID=1">View bank account balance of accountID 1</a><br>
+<a href="?accountID=1">View bank account balance of accountID 2</a><br>
+Action: <a href="?accountID=1&amount=500">Withdraw 500€ from accountID 1</a><br>
 
 <?php
 

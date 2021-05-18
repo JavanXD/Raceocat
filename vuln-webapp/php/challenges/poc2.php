@@ -1,8 +1,9 @@
 <h2>Challenge 2: Multiple poll votes</h2>
 
-<a href="?postingID=1">Sehe Likes von Posting 1</a><br>
+<p>You are only allowed to like a postingID once. Similar to a facebook or twitter like.</p>
 
-<a href="?postingID=1&userID=5">Sehe Likes von Posting 1 und füge Like hinzu mit userID 5</a><br>
+<a href="?postingID=1">View all the likes of postingID 1</a><br>
+Action: <a href="?postingID=1&userID=5">Like postingID 1 with userID 5</a><br>
 
 <?php
 
@@ -45,13 +46,14 @@ if (isset($_REQUEST['postingID'])) {
             WHERE postingID = $postingID";
     $result = $mysqli->query($sql);
 
-    if ($result->num_rows > 0) {
-        echo "Das sind alle likes:<br>";
+    echo "The posting with postingID ".$postingID." was liked by the following people:<br>";
+    if ($result->num_rows > 0) {    
         // output data of each row
         while ($row = $result->fetch_assoc()) {
-            echo $row['postingID']." geliked von ".$row['userID']."<br>";
+            echo "- Liked by userID ".$row['userID']."<br>";
         }
+        echo "Total likes: " . $result->num_rows . "<br>";
     } else {
-        echo "No likes for this posting.<br>";
+        echo "- Noone liked this posting yet, be the first one.<br>";
     }
 }
