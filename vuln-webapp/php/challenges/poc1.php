@@ -1,7 +1,10 @@
-<h2>PoC1</h2>
-<?php
+<h2>Challenge 1: Bank account withdrawal</h2>
 
-// PoC1: withdraw money from bank account
+<a href="?accountID=1">See bank balance of accountID 1</a><br>
+
+<a href="?postingID=1&amount=500">Withdrawal 500€</a><br>
+
+<?php
 
 // ?accountID=1 - Check your Balance
 // ?accountID=1&amount=500 - Withdrawal 500€

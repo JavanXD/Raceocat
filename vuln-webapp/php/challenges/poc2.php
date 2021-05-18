@@ -1,12 +1,10 @@
-<h2>PoC2</h2>
+<h2>Challenge 2: Multiple poll votes</h2>
 
 <a href="?postingID=1">Sehe Likes von Posting 1</a><br>
 
 <a href="?postingID=1&userID=5">Sehe Likes von Posting 1 und füge Like hinzu mit userID 5</a><br>
 
 <?php
-
-// PoC2: like a twitter feed (multiple poll votes)
 
 // ?postingID=1 - View all the likes by all users for a selected postingID
 // ?postingID=1&userID=1 - Like a posting
