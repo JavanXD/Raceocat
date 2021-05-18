@@ -6,7 +6,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 function race_window($microseconds=0){
-    // 100000 = 200ms
+    // 100000 = 100ms
     // 1000000 = 1s
     if ($microseconds > 0) {
 	       usleep($microseconds);
