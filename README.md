@@ -18,17 +18,17 @@
 
 ## List of Projects  
 
-### - [Browser Extension for Firefox](./browser-extension/README.md#Usage)
+### - [Browser Extension for Firefox](./browser-extension/#readme)
 Firefox browser extension for live request monitoring and intercepting the desired request which will be forwarded to the Race Dispatcher.
 
-### - [Race Routine Infrastructure](./race-routine-infrastructure/README.md#Race-Routine-Infrastructure)
+### - [Race Routine Infrastructure](./race-routine-infrastructure/#readme)
 Race Dispatcher and Race Script to execute parallel requests against any given endpoint.
 
 
-### - [OWASP Zed Attack Proxy (ZAP) Extender](./zap-extender/README.md#Overview)
+### - [OWASP Zed Attack Proxy (ZAP) Extender](./zap-extender/#readme)
 ZAP Extensions to test for Race Conditions.
 
-### - [Vulnerable web application](./vuln-webapp/)
+### - [Vulnerable web application](./vuln-webapp/#readme)
 A web application with typical vulnerable use cases such as withdrawing money or excessive poll votes.
 
 ## License
