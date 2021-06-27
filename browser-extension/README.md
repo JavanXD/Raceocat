@@ -9,7 +9,7 @@
 
 ### Monitoring live requests
 
-Once installed you will see a blue cloud button in the toolbar, to the left of the URL bar. Click that to start monitoring requests.
+Once installed you will see a green cat button in the toolbar, to the left of the URL bar. Click that to start monitoring requests.
 
 ### Configuring Dispatcher
 
