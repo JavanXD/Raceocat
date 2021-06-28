@@ -5,3 +5,5 @@
 __pycache__/
 *.py[cod]
 *$py.class
+race-routine-infrastructure/performance-test/.Rhistory
+race-routine-infrastructure/performance-test/.RData
