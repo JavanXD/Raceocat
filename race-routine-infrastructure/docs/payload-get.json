@@ -1,6 +1,6 @@
 {
    "method":"GET",
-   "url":"https://javan.b1ue.tech/log.php",
+   "url":"https://localhost/log.php",
    "type":"main_frame",
    "headers":[
       {
