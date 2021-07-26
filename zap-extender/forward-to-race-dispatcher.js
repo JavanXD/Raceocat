@@ -1,8 +1,8 @@
 // Author: Javan Rasokat (javan.rasokat+zap@owasp.org)
 
 // parameters
-var dispatcher = "https://javan.b1ue.tech/dispatcher.php";
-var server = "https://javan.b1ue.tech/racer.php"; // add multiple servers with comma
+var dispatcher = "http://localhost/dispatcher.php";
+var server = "http://localhost/racer.php"; // add multiple servers with comma
 var proxyOn = false;
 var proxy = "localhost:8080";
 
