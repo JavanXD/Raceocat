@@ -93,7 +93,21 @@ echo '<fieldset>
 $payload = isset($_REQUEST['payload']) ? $_REQUEST['payload'] : '{"method":"GET","url":"https://'.$default_host.'/log.php"}';
 echo '<fieldset>
 	<legend>Payload</legend>
-	<textarea name="payload" cols="50" rows="25">'.htmlspecialchars($payload).'</textarea></fieldset>
+	<textarea name="payload" cols="50" rows="25">'.htmlspecialchars($payload).'</textarea></fieldset>';
+
+$reqPerConnection = isset($_REQUEST['reqPerConnection']) ? $_REQUEST['reqPerConnection'] : 25;
+echo '<fieldset>
+	<legend>Requests per Connection</legend>
+	<input type="int" name="reqPerConnection" '.(isset($reqPerConnection) ? ' value="'.(INT)$reqPerConnection.'"' : "").' placeholder="25" size="50">
+</fieldset>';
+
+$repeats = isset($_REQUEST['repeats']) ? $_REQUEST['repeats'] : 3;
+echo '<fieldset>
+	<legend>Repeats per Server</legend>
+	<input type="int" name="repeats" '.(isset($repeats) ? ' value="'.(INT)$repeats.'"' : "").' placeholder="3" size="50">
+</fieldset>';
+
+echo '
 	<input type="submit" name="submit" class="myAttack" value="Race it!">
 </form>';
 
@@ -110,7 +124,7 @@ if (isset($_POST['payload']) && isset($_POST['submit'])) {
 
 		$ch[$j] = curl_init();
 
-		curl_setopt($ch[$j], CURLOPT_URL, $servers[$j].''.(isset($proxy) ? '?proxy='.$proxy : ""));
+		curl_setopt($ch[$j], CURLOPT_URL, $servers[$j].'?reqPerConnection='.$reqPerConnection.'&repeats='.$repeats.(isset($proxy) ? '&proxy='.$proxy : ""));
 		curl_setopt($ch[$j], CURLOPT_HEADER, false);
 		curl_setopt($ch[$j], CURLOPT_POST, true);
 		curl_setopt($ch[$j], CURLOPT_POSTFIELDS, "payload=".urlencode($payload));

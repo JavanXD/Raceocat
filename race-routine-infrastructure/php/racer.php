@@ -28,8 +28,8 @@ if (isset($_POST['payload'])) {
 	//$curl_useragent = isset($payload->headers["User-Agent"]) ? $payload->headers["User-Agent"] : "RACE";
 	//$curl_referer = isset($payload->headers["Referer"]) ? $payload->headers["Referer"] : NULL;
 
-	$reqPerConnection = 10;
-	$repeats = 2;
+	$reqPerConnection = isset($_REQUEST['reqPerConnection']) ? $_REQUEST['reqPerConnection'] : 25;
+	$repeats = isset($_REQUEST['repeats']) ? $_REQUEST['repeats'] : 3;
 
 	if (filter_var($url, FILTER_VALIDATE_URL) === FALSE) {
 		die('<p>Not a valid URL.</p>');
