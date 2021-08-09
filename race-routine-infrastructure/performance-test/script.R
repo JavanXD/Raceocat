@@ -7,11 +7,11 @@ library(xts)
 library(lubridate)
 library(stringr)
 
-# Setze Optionen für Anzeige der Nachkommastellen und der Milisekunden
+# Setze Optionen für Anzeige der Nachkommastellen und der Millisekunden
 options(digits=6)
 options(digits.secs=4)
 
-#setwd("~/Projects/raceocat/race-routine-infrastructure/performance-test/")
+#setwd("~/Projects/Raceocat/race-routine-infrastructure/performance-test/")
 #basename(getwd())
 mydata <- read.csv("3server-2repeats-10connections/log.csv", colClasses=c("ip"="character","microtime"="character"))
 df <- data.frame(mydata)
@@ -19,7 +19,7 @@ df <- data.frame(mydata)
 # Konvertiere microtime zu Date
 df$time <- as.POSIXct(as.numeric(df$microtime), origin="1970-01-01")
 
-# Ersetze IP Adressen mit Server Buchstaben
+# Ersetze IP-Adressen mit Server Buchstaben
 df$server <- ""
 df$server[which(df$ip == "2a01:238:43b9:300:e5ab:2457:1e6b:95c7")] <- "C"
 df$server[which(df$ip == "2a01:238:20a:202:1000::25")] <- "B"
@@ -27,7 +27,7 @@ df$server[which(df$ip == "87.106.157.205")] <- "A"
 # Colors for each group
 group.colors <- c(A="red", B="blue", C="darkgreen")
 
-# Kürze zu lange IP Adressen
+# Kürze zu lange IP-Adressen
 #df$ip <- str_trunc(df$ip, 19)
 
 # Auszug aus Datensatz
