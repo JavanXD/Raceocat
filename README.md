@@ -32,9 +32,17 @@ ZAP Extensions to test for Race Conditions.
 ### - [Vulnerable web application](./vuln-webapp/#readme)
 A web application with typical vulnerable use cases such as withdrawing money or excessive poll votes.
 
+## Demo
+
+A demo of the tool and a introduction to race condition vulnerabililties can be watched in this video, which got recorded at Hack in the Box Conference (HITBSecConf) 2022 Singapore:
+
+[![Exploiting Race Condition Vulnerabilities In Web Applications – Javan Rasokat](http://img.youtube.com/vi/rSizIebpBo8/0.jpg)](https://www.youtube.com/watch?v=rSizIebpBo8&list=PLmv8T5-GONwRu8F1SgdBjP6XydFJipKoa)
+
+In addition a PDF of the research can be found [here](https://opus-htw-aalen.bsz-bw.de/frontdoor/index/index/docId/1327) (in German). 
+
 ## To Dos
 
-The following action items are considered to be implemented in a future version:
+The following action items are considered to be implemented in a future version (happy for any contributions!):
 * Improve timing (by using ntp, a websocket push, or anything else) of the race server to decrease the time gap between dispatching to multiple race servers OR allow a scheduled timing option
 * Allow downloading of the HTTP-Responses to analyse the success of the attack
 * Allow multiple, different parameters/content of the HTTP-Request to allow improved exploitation of load balancers with sticky sessions and other attack szenarios that require custom parameters
@@ -48,4 +56,4 @@ Feel free to open issues / pull requests if you want to contribute to this proje
 
 ## Author Information
 
-You can reach me by email at javan.rasokat+raceocat@owasp.org or on Twitter [@javanrasokat](https://twitter.com/javanrasokat).
+You can reach me on Twitter [@javanrasokat](https://twitter.com/javanrasokat).
