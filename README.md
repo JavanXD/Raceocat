@@ -3,15 +3,13 @@
 
 ## Overview
 
-- [Quickstart](#quickstart)
 - [Architecture Overview](#architecture-overview)
 - [List of Projects](#list-of-projects)
+- [Demo](#demo)
 - [To-Dos](#to-dos)
 - [License](#license)
 - [Contributing](#contributing)
 - [Author Information](#author-information)
-
-## Quickstart
 
 ## Architecture Overview
 
@@ -24,7 +22,6 @@ Firefox browser extension for live request monitoring and intercepting the desir
 
 ### - [Race Routine Infrastructure](./race-routine-infrastructure/#readme)
 Race Dispatcher and Race Script to execute parallel requests against any given endpoint.
-
 
 ### - [OWASP Zed Attack Proxy (ZAP) Extender](./zap-extender/#readme)
 ZAP Extensions to test for Race Conditions.
