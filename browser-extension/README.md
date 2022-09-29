@@ -21,7 +21,7 @@ Once you have installed the add-on to your browser you navigate to `about:addons
 
 ### Install from the Official Add-ons Page
 
-You can install from the official add-ons page here, [here](tbd).
+You can install from the official add-ons page [here TBD](tbd).
 
 ### Development: Installing from source in Firefox
 
