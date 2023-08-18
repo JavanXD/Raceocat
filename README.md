@@ -42,7 +42,7 @@ In addition a PDF of the research can be found [here](https://opus-htw-aalen.bsz
 The following action items are considered to be implemented in a future version (happy for any contributions!):
 * Improve timing (by using ntp, a websocket push, or anything else) of the race server to decrease the time gap between dispatching to multiple race servers OR allow a scheduled timing option
 * Allow downloading of the HTTP-Responses to analyse the success of the attack
-* Allow multiple, different parameters/content of the HTTP-Request to allow improved exploitation of load balancers with sticky sessions and other attack szenarios that require custom parameters
+* Allow multiple, different parameters/content of the HTTP-Request to allow improved exploitation of load balancers with sticky sessions and other attack scenarios that require custom parameters
 
 ## License
 Code of Raceocat is licensed under the Apache License 2.0.
