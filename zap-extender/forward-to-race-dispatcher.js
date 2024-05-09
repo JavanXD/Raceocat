@@ -7,7 +7,7 @@ var proxyOn = false;
 var proxy = "localhost:8080";
 
 // Script variable to use when unregistering
-var popupmenuitemtype = Java.type("org.zaproxy.zap.view.popup.PopupMenuItemHistoryReferenceContainer");
+var popupmenuitemtype = Java.extend(Java.type("org.zaproxy.zap.view.popup.PopupMenuItemHistoryReferenceContainer"));
 var curlmenuitem = new popupmenuitemtype("Forward Request to Race Dispatcher") {
 	performAction: function(href) {
 		invokeWith(href.getHttpMessage());

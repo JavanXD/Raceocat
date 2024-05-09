@@ -7,7 +7,7 @@
 var requests = 25;
 
 // Script variable to use when uninstalling
-var popupmenuitemtype = Java.type("org.zaproxy.zap.view.popup.PopupMenuItemHistoryReferenceContainer");
+var popupmenuitemtype = Java.extend(Java.type("org.zaproxy.zap.view.popup.PopupMenuItemHistoryReferenceContainer"));
 var curlmenuitem = new popupmenuitemtype("Copy curl command to test for Race Condition") {
 	performAction: function(href) {
 		invokeWith(href.getHttpMessage());
